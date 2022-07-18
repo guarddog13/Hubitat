@@ -218,7 +218,7 @@ def pollStatus(id) {
         body: ['deviceId': taco, 'command': 'read_current']
     ]
     //Data to help the resposne function know what was being asked at the time, and from who (what child device)
-    def data = ["deviceNetworkId": taco, "request": "readStatus"]
+    def data = ["deviceNetworkId": taco, "request": "req_extended_status"]
     asynchttpPost(processCallBack, pollParams, data)
 }
 
